@@ -75,6 +75,8 @@ namespace RockPaperScissorsBoom.Server
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
+
+            app.UseForwardedHeaders();
             app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
