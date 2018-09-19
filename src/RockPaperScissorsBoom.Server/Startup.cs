@@ -66,6 +66,17 @@ namespace RockPaperScissorsBoom.Server
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+            app.Use(async (context, next) =>
+                {
+                    context.Request.Scheme = "https";
+                    await next.Invoke();
+                });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -87,16 +98,7 @@ namespace RockPaperScissorsBoom.Server
 
             app.UseMvc();
 
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
 
-            app.Use(async (context, next) =>
-                {
-                    context.Request.Scheme = "https";
-                    await next.Invoke();
-                });
         }
     }
 }
