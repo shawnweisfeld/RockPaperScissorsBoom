@@ -77,10 +77,7 @@ namespace RockPaperScissorsBoom.Server
                 app.UseHsts();
             }
 
-            app.UseForwardedHeaders(new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-            });
+
             app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -89,6 +86,17 @@ namespace RockPaperScissorsBoom.Server
             app.UseAuthentication();
 
             app.UseMvc();
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
+            app.Use(async (context, next) =>
+                {
+                    context.Request.Scheme = "https";
+                    await next.Invoke();
+                });
         }
     }
 }
