@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using RockPaperScissorsBoom.Server.Data;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace RockPaperScissorsBoom.Server
 {
@@ -76,7 +77,10 @@ namespace RockPaperScissorsBoom.Server
                 app.UseHsts();
             }
 
-            app.UseForwardedHeaders();
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
             app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
