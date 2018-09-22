@@ -18,3 +18,8 @@ This server project provides an API that developers can use to develop bots that
  * Each bot may also throw a water balloon whenever it likes.
 
 ![game uml](docs/game_diagram.png)
+
+## Labs
+
+- [1 - Setup](./labs/1-Setup.md)
+- [2 - Azure DevOps](./labs/2-AzureDevOps.md)
