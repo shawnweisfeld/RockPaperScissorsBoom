@@ -1,3 +1,8 @@
+## Challenges
+
+- [1 - Setup](./labs/1-Setup.md)
+- [2 - Azure DevOps](./labs/2-AzureDevOps.md)
+
 # Rock Paper Scissors Boom
 
 Rock Paper Scissors Boom is a collaborative competition among developers. It's based on a project idea from a Microsoft Developer Evangelist that was called "Rock Paper Azure". Unlike that project, we are not going to require that you program on Azure, however, it will be an option.
@@ -19,7 +24,4 @@ This server project provides an API that developers can use to develop bots that
 
 ![game uml](docs/game_diagram.png)
 
-## Labs
 
-- [1 - Setup](./labs/1-Setup.md)
-- [2 - Azure DevOps](./labs/2-AzureDevOps.md)
