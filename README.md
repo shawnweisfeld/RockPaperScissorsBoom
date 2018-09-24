@@ -1,7 +1,7 @@
 ## Challenges
 
-- [1 - Setup](./labs/1-Setup.md)
-- [2 - Azure DevOps](./labs/2-AzureDevOps.md)
+- [1 - Setup](./challenges/1-Setup.md)
+- [2 - Azure DevOps](./challenges/2-AzureDevOps.md)
 
 # Rock Paper Scissors Boom
 
