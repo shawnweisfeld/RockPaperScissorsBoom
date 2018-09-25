@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using RockPaperScissor.Core.Game;
 using RockPaperScissor.Core.Game.Bots;
 using RockPaperScissorsBoom.Server.Bot;
+using Microsoft.Extensions.Configuration;
 
 namespace RockPaperScissorsBoom.Server.Controllers
 {
@@ -16,25 +17,44 @@ namespace RockPaperScissorsBoom.Server.Controllers
     [ApiController]
     public class RunGameController : ControllerBase
     {
-        private readonly ApplicationDbContext _db;
-        public RunGameController(ApplicationDbContext db)
+        private readonly ApplicationDbContext db;
+        private readonly IMetrics metrics;
+        private readonly IConfiguration configuration;
+
+        public RunGameController(ApplicationDbContext db, IMetrics metrics, IConfiguration configuration)
         {
-            _db = db;
+            this.db = db;
+            this.metrics = metrics;
+            this.configuration = configuration;
         }
 
         [HttpPost]
         public string Post()
         {
-            List<Competitor> competitors = _db.Competitors.ToList();
+            List<Competitor> competitors = db.Competitors.ToList();
 
-            var gameRunner = new GameRunner();
+            var gameRunner = new GameRunner(metrics);
+            
             foreach (var competitor in competitors)
             {
                 BaseBot bot = CreateBotFromCompetitor(competitor);
                 gameRunner.AddBot(bot);
             }
 
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
             GameRunnerResult gameRunnerResult = gameRunner.StartAllMatches();
+
+            stopwatch.Stop();
+
+            var metric = new Dictionary<string, double> { { "GameLength", stopwatch.Elapsed.TotalMilliseconds } };
+
+            // Set up some properties:
+            var properties = new Dictionary<string, string> { { "Source", configuration["P20HackFestTeamName"] } };
+
+            // Send the event:
+            metrics.TrackEventDuration("GameRun", properties, metric);
+
             SaveResults(gameRunnerResult);
             return gameRunnerResult.AllMatchResults.Select(x => x.MatchResults).First().First().Player1.Name;
         }
@@ -43,8 +63,8 @@ namespace RockPaperScissorsBoom.Server.Controllers
         {
             if (gameRunnerResult.GameRecord.BotRecords.Any())
             {
-                _db.GameRecords.Add(gameRunnerResult.GameRecord);
-                _db.SaveChanges();
+                db.GameRecords.Add(gameRunnerResult.GameRecord);
+                db.SaveChanges();
             }
         }
 

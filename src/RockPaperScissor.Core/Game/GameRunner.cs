@@ -8,11 +8,16 @@ namespace RockPaperScissor.Core.Game
 {
     public class GameRunner
     {
+        public GameRunner(IMetrics metrics)
+        {
+            this.metrics = metrics;
+        }
         private readonly List<BaseBot> _competitors = new List<BaseBot>();
+        private readonly IMetrics metrics;
 
         public GameRunnerResult StartAllMatches()
         {
-            var matchRunner = new MatchRunner();
+            var matchRunner = new MatchRunner(metrics);
 
             var matchResults = new List<MatchResult>();
 

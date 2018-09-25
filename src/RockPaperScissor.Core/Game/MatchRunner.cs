@@ -1,5 +1,6 @@
 ﻿using RockPaperScissor.Core.Game.Bots;
 using RockPaperScissor.Core.Game.Results;
+using RockPaperScissor.Core.Model;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,12 @@ namespace RockPaperScissor.Core.Game
 {
     public class MatchRunner
     {
+        private readonly IMetrics metrics;
+
+        public MatchRunner(IMetrics metrics)
+        {
+            this.metrics = metrics;
+        }
         public MatchResult RunMatch(BaseBot player1, BaseBot player2)
         {
             var roundResults = new List<RoundResult>();
@@ -21,7 +28,7 @@ namespace RockPaperScissor.Core.Game
 
             for (int i = 0; i < 1000; i++)
             {
-                previousResult = roundRunner.RunRound(player1, player2, previousResult);
+                previousResult = roundRunner.RunRound(player1, player2, previousResult, metrics);
                 roundResults.Add(previousResult);
             }
 
