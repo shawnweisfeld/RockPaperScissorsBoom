@@ -26,14 +26,14 @@ With this first challenge you will be able to setup the environment required to 
 
 1. In Azure Cloud Shell, make sure `git status` is showing you the proper branch
 2. In Azure Cloud Shell, make sure `docker images` command runs successfuly (without error).
-3. In Azure Cloud Shell, make sure `docker-machine list` is showing you your Docker-machine successfuly (without error).
+3. In Azure Cloud Shell, make sure `docker-machine ls` is showing you your Docker-machine successfuly (without error).
 4. In Azure DevOps (Boards), make sure you have your backlog populated. From the Kanban view ("FIXME(mabenoit)"), you could now drag and drop this user story associated to this Challenge to the `Done` column, congrats! ;)
 5. (Optional) In Azure Cloud Shell, let's play with the following commands: `ls -la`, `git version`, `az --version`, `docker images`, `code .`, etc.
 
 ## Tips
 
 1. In Azure Cloud Shell, you will leverage the `Bash (CLI)` mode, we all love Linux! <3
-2. To create an Azure Docker Machine, follow [these instructions-FIXME(mabenoit)]()
+2. To create an Azure Docker Machine, follow [these instructions](https://gist.github.com/mathieu-benoit/87c9196dea3ca0c634b70f6cd0cc6149)
 3. To populate your Azure Boards (Kanban) in Azure DevOps you could import [this file-FIXME(mabenoit)]()
 
 ## Advanced challenges

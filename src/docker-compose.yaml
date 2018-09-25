@@ -1,0 +1,23 @@
+version: '3'
+services:
+  rockpaperscissors-sql:
+    image: microsoft/mssql-server-linux
+    container_name: rockpaperscissors-sql
+    environment:
+        SA_PASSWORD: "<YOUR-STRONG-PASSWORD>"
+        ACCEPT_EULA: "Y"
+    ports:
+        - "1433:1433"
+
+  rockpaperscissors-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.Server
+    container_name: rockpaperscissors-server
+    environment:
+      ConnectionStrings_DefaultConnection: "Server=rockpaperscissors-sql,1433;Database=RockPaperScissorsBoom;User Id=SA;Password=<YOUR-STRONG-PASSWORD>;"
+      ASPNETCORE_ENVIRONMENT: "Development"
+    ports:
+        - "80:80"
+    depends_on:
+        - rockpaperscissors-sql
