@@ -8,23 +8,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace RockPaperScissorsBoom.Server.Pages
 {
     public class RunTheGameModel : PageModel
     {
-        private readonly ApplicationDbContext _db;
+        private readonly ApplicationDbContext db;
+        private readonly IMetrics metrics;
+        private readonly IConfiguration configuration;
+
         public List<BotRecord> BotRankings { get; set; }
         public List<FullResults> AllFullResults { get; set; }
 
-        public RunTheGameModel(ApplicationDbContext db)
+        public RunTheGameModel(ApplicationDbContext db, IMetrics metrics, IConfiguration configuration)
         {
-            _db = db;
+            this.db = db;
+            this.metrics = metrics;
+            this.configuration = configuration;
         }
 
         public void OnGet()
         {
-            GameRecord gameRecord = _db.GameRecords
+            GameRecord gameRecord = db.GameRecords
                 .Include(x => x.BotRecords)
                 .ThenInclude(x => x.Competitor)
                 .OrderByDescending(x => x.GameDate)
@@ -35,22 +41,36 @@ namespace RockPaperScissorsBoom.Server.Pages
 
         public void OnPost()
         {
-            List<Competitor> competitors = _db.Competitors.ToList();
+            List<Competitor> competitors = db.Competitors.ToList();
             if (!competitors.Any())
             {
                 competitors = GetDefaultCompetitors();
-                _db.Competitors.AddRange(competitors);
-                _db.SaveChanges();
+                db.Competitors.AddRange(competitors);
+                db.SaveChanges();
             }
 
-            var gameRunner = new GameRunner();
+            var gameRunner = new GameRunner(metrics);
             foreach (var competitor in competitors)
             {
                 BaseBot bot = CreateBotFromCompetitor(competitor);
                 gameRunner.AddBot(bot);
             }
 
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
             GameRunnerResult gameRunnerResult = gameRunner.StartAllMatches();
+
+            stopwatch.Stop();
+
+            var metric = new Dictionary<string, double> { { "GameLength", stopwatch.Elapsed.TotalMilliseconds } };
+
+            // Set up some properties:
+            var properties = new Dictionary<string, string> { { "Source", configuration["P20HackFestTeamName"] } };
+
+            // Send the event:
+            metrics.TrackEventDuration("GameRun", properties, metric);
+
+
             SaveResults(gameRunnerResult);
             BotRankings = gameRunnerResult.GameRecord.BotRecords.OrderByDescending(x => x.Wins).ToList();
             AllFullResults = gameRunnerResult.AllMatchResults.OrderBy(x => x.Competitor.Name).ToList();
@@ -60,15 +80,15 @@ namespace RockPaperScissorsBoom.Server.Pages
         {
             if (gameRunnerResult.GameRecord.BotRecords.Any())
             {
-                _db.GameRecords.Add(gameRunnerResult.GameRecord);
-                _db.SaveChanges();
+                db.GameRecords.Add(gameRunnerResult.GameRecord);
+                db.SaveChanges();
             }
         }
 
         private static BaseBot CreateBotFromCompetitor(Competitor competitor)
         {
             Type type = Type.GetType(competitor.BotType);
-            var bot = (BaseBot) Activator.CreateInstance(type);
+            var bot = (BaseBot)Activator.CreateInstance(type);
             if (bot is SignalRBot signalRBot)
             {
                 signalRBot.ApiRootUrl = competitor.Url;

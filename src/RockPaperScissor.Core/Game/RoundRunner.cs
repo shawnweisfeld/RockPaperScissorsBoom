@@ -1,15 +1,30 @@
-﻿using RockPaperScissor.Core.Extensions;
+﻿using System.Collections.Generic;
+using RockPaperScissor.Core.Extensions;
 using RockPaperScissor.Core.Game.Bots;
 using RockPaperScissor.Core.Game.Results;
+using RockPaperScissor.Core.Model;
 
 namespace RockPaperScissor.Core.Game
 {
     public class RoundRunner
     {
-        public RoundResult RunRound(BaseBot player1, BaseBot player2, RoundResult previousResult)
+        internal Decision GetDecision(BaseBot player, RoundResult previousResult, IMetrics metrics)
         {
-            var p1Decision = player1.GetDecision(previousResult.ToPlayerSpecific(player1));
-            var p2Decision = player2.GetDecision(previousResult.ToPlayerSpecific(player2));
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            var d = player.GetDecision(previousResult.ToPlayerSpecific(player));
+            stopwatch.Stop();
+            var metric = new Dictionary<string, double> { { "DecisionTime", stopwatch.Elapsed.TotalMilliseconds } };
+            var properties = new Dictionary<string, string> { { "Bot", player.Name } };
+            metrics.TrackEventDuration("BotDesicionTime", properties, metric);
+            return d;
+        }
+
+        public RoundResult RunRound(BaseBot player1, BaseBot player2, RoundResult previousResult, IMetrics metrics)
+        {
+
+            var p1Decision = GetDecision(player1, previousResult, metrics);
+
+            var p2Decision = GetDecision(player2, previousResult, metrics);
 
             BaseBot winner = null;
             // confirm each has a valid choice
