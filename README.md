@@ -1,16 +1,39 @@
+Welcome to the Azure App Dev Hack!
+
+It's a challenge based and not a step-by-step lab, but don't worry you will do great whatever your experience is! You will be guided through different labs to bonify the given "Rock Paper Scissors Boom" app by leveraging Azure PaaS services. The intent is having you practicing with our tools, technologies and services. Let's try to go out of your comfort zone, try and learn new stuffs, and for sure let's have fun!
+
+You could do this on your own or by being part of a team, it's up to you. We would like to see a lot of collaboration and creativity!
+
+And don't forget there is proctors around you, just raise your hand at any time!
+
+Here are the technologies and services you will leverage:
+- GitHub
+- Git
+- Linux
+- ASP.NET Core
+- SQL Server on Linux
+- Docker
+- Azure DevOps (formerly known as VSTS)
+- Azure App Service on Linux
+- Azure Container Registry
+- Azure Application Insights
+- Azure SQL Database
+
 ## Challenges
 
-- [1 - Setup](./labs/1-Setup.md)
-- [2 - Azure DevOps](./labs/2-AzureDevOps.md)
+- [1 - Setup](./challenges/Setup.md)
+- [2 - Run the app](./challenges/RunTheApp.md)
+- [3 - Run the app on Azure](./challenges/RunOnAzure.md)
+- [4 - Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
+- [5 - Leverage Azure SQL Database](./challenges/MoveToAzureSql.md)
 
-# Rock Paper Scissors Boom
+## About the Rock Paper Scissors Boom app
 
-Rock Paper Scissors Boom is a collaborative competition among developers. It's based on a project idea from a Microsoft Developer Evangelist that was called "Rock Paper Azure". Unlike that project, we are not going to require that you program on Azure, however, it will be an option.
+Rock Paper Scissors Boom is a collaborative competition among developers. It's based on a project idea from a Microsoft Developer Evangelist that was called "Rock Paper Azure".
 
 This server project provides an API that developers can use to develop bots that play the Rock Paper Sissors Boom game.
 
-## Rules of the Game
-
+Rules of the Game:
  * A match is played between two bots and will consist of 1000 rounds of Rock-Paper-Scissors
  * Rock beats Scissors
  * Scissors beats Paper
