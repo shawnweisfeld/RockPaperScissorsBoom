@@ -10,7 +10,7 @@ So far we have deployed a SQL Server on Linux containers which was really conven
 
 ## Challenges
 
-1. Provision your Azure SQL Database via Infrastructure-as-Code from within Azure Cloud Shell. The approach here is to leverage the Azure CLI (not the Azure portal) by executing a serie of bash commands. Friends don't let friends use UI to provision Azure services, right! ;)
+1. Provision your Azure SQL Database via Infrastructure-as-Code from within Azure Cloud Shell. The approach here is to leverage the Azure CLI (not the Azure portal) by executing a serie of bash commands. Friends don't let friends use UI to provision Azure services, right? ;)
 1. Update your app with the new connection string, test the app as an end-user, and play a game once deployed there.
 
 ## Success criteria
