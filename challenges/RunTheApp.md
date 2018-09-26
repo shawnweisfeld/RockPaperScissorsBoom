@@ -15,8 +15,8 @@ With this second challenge you will be able to run "locally" in your Azure Cloud
 
 ## Success criteria
 
-1. In Azure Cloud Shell, make sure `docker images` is showing you x images FIXME(mabenoit).
-2. In Azure Cloud Shell, make sure `docker ps` is showing you x containers FIXME(mabenoit).
+1. In Azure Cloud Shell, make sure `docker images` is showing you 5 Docker images.
+2. In Azure Cloud Shell, make sure `docker ps` is showing you 2 Docker containers.
 3. In your web browser, navigate to the app and play a game, make sure it's working without any error.
 4. In Azure Cloud Shell, read the `docker-compose.yaml` file and the `Dockerfile*` files. What do you see? What do you understand? Are you able to quote 3 benefits/advantages of using Docker?
 5. In Azure DevOps (Boards), from the Boards view, you could now drag and drop this user story associated to this Challenge to the `Done` column, congrats! ;)
@@ -36,8 +36,8 @@ Too comfortable? Eager to do more? Here you are:
 
 ## Learning resources
 
-- SQL Server on Linux - FIXME(mabenoit)
-- .NET Core - FIXME(mabenoit)
-- Docker - FIXME(mabenoit)
+- [SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview)
+- [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core)
+- [Why Docker?](https://www.docker.com/)
 
 [Next challenge (Run the app on Azure) >](./RunOnAzure.md)
