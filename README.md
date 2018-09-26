@@ -1,6 +1,6 @@
 # Welcome to the Azure App Dev Hack!
 
-It's a challenge based and not a step-by-step lab, but don't worry you will do great whatever your experience is! You will be guided through different labs to bonify the given "Rock Paper Scissors Boom" app by leveraging Azure PaaS services. The intent is having you practicing with our tools, technologies and services. Let's try to go out of your comfort zone, try and learn new stuffs, and for sure let's have fun!
+It's a challenge based and not a step-by-step hack, but don't worry you will do great whatever your experience is! You will be guided through different labs to bonify the given "Rock Paper Scissors Boom" app by leveraging Azure PaaS services. The intent is to have you practice the tools, technologies and services our partners are asking you about. Let's try to go out of your comfort zone, try and learn new stuffs, and for sure let's have fun!
 
 You could do this on your own or by being part of a team, it's up to you. We would like to see a lot of collaboration and creativity!
 
@@ -21,11 +21,11 @@ Here are the technologies and services you will leverage:
 
 ## Challenges
 
-- [1 - Setup](./challenges/Setup.md)
-- [2 - Run the app](./challenges/RunTheApp.md)
-- [3 - Move to Azure SQL Database](./challenges/MoveToAzureSql.md)
-- [4 - Run the app on Azure](./challenges/RunOnAzure.md)
-- [5 - Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
+1. [Setup](./challenges/Setup.md)
+1. [Run the app](./challenges/RunTheApp.md)
+1. [Move to Azure SQL Database](./challenges/MoveToAzureSql.md)
+1. [Run the app on Azure](./challenges/RunOnAzure.md)
+1. [Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
 
 ## About the Rock Paper Scissors Boom app
 

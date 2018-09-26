@@ -3,44 +3,49 @@
 ## Prerequisities
 
 1. Your laptop: Win, MacOS or Linux
-2. Your GitHub account, if not yet it's time to create one! ;)
-3. Your Azure Subscription
-4. Your Azure DevOps account, if not yet it's time to create one! ;)
+1. Your GitHub account, if not yet it's time to create one! ;)
+1. Your Azure Subscription
+1. Your Azure DevOps account, if not yet it's time to create one! ;)
 
 ## Introduction
 
 With this first challenge you will be able to setup the environment required to run all the further challenges. You will leverage Azure Cloud Shell and an Azure Docker-machine instead of your local machine for any command you will need. In other word, you just need a web browser and an internet connection on your laptop. Furthermore, you will be able to create the associated Azure DevOps project to manage first your backlog, and your builds, releases and tests in further labs.
-*The use of Azure Cloud Shell is our recommendation to simplify your experience. But if you prefer using your local machine to do the lab, feel free to do it. Based on our experience, the setup of Docker on local machine (which is required for the labs) could take some time and could have some issues.*
+
+> The use of Azure Cloud Shell is our recommendation to simplify your experience. But if you prefer using your local machine to do the lab, feel free to do it. Based on our experience, the setup of Docker on local machine (which is required for the labs) could take some time and could have some issues.*
+
+[Docker Machine](https://docs.docker.com/machine/overview/) is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands. This will allow you to build a linux VM in Azure that will act as your development box. On this VM you will build and run your code and containers during development. However insted of SSHing into the VM to do this work, the docker machine components will install into your Azure Cloud Shell, giving you control of the docker instance in the VM from the browser. This eliminates the need to install anything locally on your machine.
 
 ## Challenges
 
-1. Fork this repo in your GitHub account
-2. Clone your repo in Azure Cloud Shell
-3. Change your current branch to `ocp-hack` - FIXME(mrichter), it should be on `master`?
-4. Setup an Azure Docker-machine to be used through your Azure Cloud Shell
-5. Create a new Azure DevOps project (with Git and Agile template)
-  - The source code will be in GitHub, but the rest (backlog, build, release and tests) will be in Azure DevOps.
-6. Populate your Azure DevOps (Boards) backlog with user stories (work items). One user story per challenge.
+1. [Fork](https://help.github.com/articles/fork-a-repo/) this repo in your GitHub account
+1. [Clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) your repo in [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview)
+   1. We recommend using [Bash (Linux) mode](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) in the cloud shell for this Hack
+   1. Have limited screen real estate? Try the [full screen shell](https://shell.azure.com/)
+1. [Change](https://git-scm.com/docs/git-checkout) your current branch to `ocp-hack` - FIXME(mrichter), it should be on `master`?
+1. Setup an Azure Docker-machine to be used through your Azure Cloud Shell ([instructions here](./helpers/CreateDockerMachine.md))
+1. Create a new Private [Azure DevOps project](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav) (with Git and Agile under advanced options)
+   1. The source code will be in GitHub, but the rest (backlog, build, release and tests) will be in Azure DevOps.
+1. Populate your Azure DevOps (Boards) backlog with user stories (work items). One user story per challenge. ([List of challenges in the ReadMe](../Readme.md))
 
 ## Success criteria
 
 1. In Azure Cloud Shell, make sure `git status` is showing you the proper branch
-2. In Azure Cloud Shell, make sure `docker images` command runs successfuly (without error).
-3. In Azure Cloud Shell, make sure `docker-machine ls` is showing you your Docker-machine successfuly (without error).
-4. In Azure DevOps (Boards), make sure you have your backlog populated. From the Boards view, you could now drag and drop this user story associated to this Challenge to the `Done` column, congrats! ;)
-5. In Azure Cloud Shell, let's play with the following commands: `ls -la`, `git version`, `az --version`, `docker images`, `code .`, etc.
+1. In Azure Cloud Shell, make sure `docker images` command runs successfuly (without error).
+1. In Azure Cloud Shell, make sure `docker-machine ls` is showing you your Docker-machine successfuly (without error).
+1. In Azure DevOps (Boards), make sure you have your backlog populated. From the Boards view, you could now drag and drop this user story associated to this Challenge to the `Done/Resolved` column, congrats! ;)
+1. In Azure Cloud Shell, let's play with the following commands: `ls -la`, `git version`, `az --version`, `docker images`, `code .`, etc.
 
 ## Tips
 
 1. In Azure Cloud Shell, you will leverage the `Bash (Linux)` mode, we all love Linux! <3
-2. To create an Azure Docker Machine, follow [these instructions](./helpers/CreateDockerMachine.md)
+1. To create an Azure Docker Machine, follow [these instructions](./helpers/CreateDockerMachine.md)
 
 ## Advanced challenges
 
 Too comfortable? Eager to do more? Here you are:
 
 1. Instead of leveraging Azure Cloud Shell and an Azure Docker Machine to build your Docker images and run them, you could do that locally on your laptop by installing Docker CE and Docker-compose.
-2. Instead of leveraging GitHub to host your source code, you could leverage Azure Repos (Git) in Azure DevOps.
+1. Instead of leveraging GitHub to host your source code, you could leverage Azure Repos (Git) in Azure DevOps.
 
 ## Learning resources
 
