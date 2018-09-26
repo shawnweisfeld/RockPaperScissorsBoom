@@ -32,7 +32,7 @@ With this first challenge you will be able to setup the environment required to 
 1. In Azure Cloud Shell, make sure `git status` is showing you the proper branch
 1. In Azure Cloud Shell, make sure `docker images` command runs successfuly (without error).
 1. In Azure Cloud Shell, make sure `docker-machine ls` is showing you your Docker-machine successfuly (without error).
-1. In Azure DevOps (Boards), make sure you have your backlog populated. From the Boards view, you could now drag and drop this user story associated to this Challenge to the `Done/Resolved` column, congrats! ;)
+1. In Azure DevOps (Boards), make sure you have your backlog populated. From the Boards view, you could now drag and drop this user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 1. In Azure Cloud Shell, let's play with the following commands: `ls -la`, `git version`, `az --version`, `docker images`, `code .`, etc.
 
 ## Tips

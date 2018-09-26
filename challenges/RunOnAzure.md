@@ -19,7 +19,7 @@ In the previous we deployed the app on Azure but into an Azure Docker-machine pl
 2. In Azure Cloud Shell, delete the previously SQL Server on Linux container deployed on your Azure Docker-machine, by running a `docker rm` command.
 3. In your web browser, navigate to the app and play a game, make sure it's working without any error.
 4. In GitHub, make sure you documented the different commands you have used to provision your infrastructure. It could be in a `.md` file or in `.sh` file. You will complete this script as you are moving forward with the further labs.
-5. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Done` column, congrats! ;)
+5. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 
 ## Tips
 
