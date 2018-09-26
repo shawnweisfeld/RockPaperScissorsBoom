@@ -10,7 +10,7 @@ So far we have deployed a SQL Server on Linux containers which was really conven
 
 ## Challenges
 
-1. Provision your Azure SQL Database via Infrastructure-as-Code from within Azure Cloud Shell. The approach here is to leverage the Azure CLI (not the Azure portal) by executing a serie of bash commands. Friends don't let friends use UI to provision Azure services, right? ;)
+1. Provision your Azure SQL Database via Infrastructure-as-Code from within Azure Cloud Shell. The approach here is to leverage the Azure CLI (not the Azure portal) by executing a serie of bash commands. *Friends don't let friends use UI to provision Azure services, right? ;)*
 1. Update your app (re-build and re-deploy the Docker image) with the new connection string (as environment variable), test the app as an end-user, and play a game once deployed there.
 
 ## Success criteria
@@ -19,7 +19,7 @@ So far we have deployed a SQL Server on Linux containers which was really conven
 1. In Azure Cloud Shell, do a `docker rm` of your SQL Server on Linux container.
 1. In your web browser, navigate to the app and play a game, make sure it's working without any error.
 1. In GitHub, make sure you documented the different commands you have used to update or provision your infrastructure. It could be in a `.md` file or in `.sh` file. You will complete this script as you are moving forward with the further labs.
-   1. Be sure you dont check any secrets into a public GitHub repo
+   1. Be sure you dont commit any secrets/passwords into a public GitHub repo.
 1. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 
 ## Tips
