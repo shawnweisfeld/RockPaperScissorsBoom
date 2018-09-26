@@ -45,4 +45,4 @@ Too comfortable? Eager to do more? Here you are:
 - ACR Build task
 - Jenkins on Azure
 
-[Next challenge (Leverage Azure SQL Database) >](./MoveToAzureSql.md)
+[Next challenge (FIXME) >](./)

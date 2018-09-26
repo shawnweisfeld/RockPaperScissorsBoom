@@ -40,4 +40,4 @@ Too comfortable? Eager to do more? Here you are:
 - [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core)
 - [Why Docker?](https://www.docker.com/)
 
-[Next challenge (Run the app on Azure) >](./RunOnAzure.md)
+[Next challenge (Move to Azure SQL Database) >](./MoveToAzureSql.md)

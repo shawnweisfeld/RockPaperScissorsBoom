@@ -23,9 +23,9 @@ Here are the technologies and services you will leverage:
 
 - [1 - Setup](./challenges/Setup.md)
 - [2 - Run the app](./challenges/RunTheApp.md)
-- [3 - Run the app on Azure](./challenges/RunOnAzure.md)
-- [4 - Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
-- [5 - Leverage Azure SQL Database](./challenges/MoveToAzureSql.md)
+- [3 - Move to Azure SQL Database](./challenges/MoveToAzureSql.md)
+- [4 - Run the app on Azure](./challenges/RunOnAzure.md)
+- [5 - Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
 
 ## About the Rock Paper Scissors Boom app
 

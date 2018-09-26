@@ -2,7 +2,7 @@
 
 ## Prerequisities
 
-1. [Challenge 4 - Build a CI/CD pipeline with Azure DevOps](./BuildCICDPipelineWithAzureDevOps.md) should be done successfuly.
+1. [Challenge 2 - Run the app](./RunTheApp.md) should be done successfuly.
 
 ## Introduction
 
@@ -42,4 +42,4 @@ Too comfortable? Eager to do more? Here you are:
 - Ansible for Azure - FIXME(mabenoit)
 - Terraform for Azure - FIXME(mabenoit)
 
-[Next challenge (FIXME) >](./)
+[Next challenge (Run the app on Azure) >](./RunOnAzure.md)

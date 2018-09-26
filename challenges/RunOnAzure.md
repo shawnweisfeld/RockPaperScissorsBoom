@@ -2,7 +2,7 @@
 
 ## Prerequisities
 
-1. [Challenge 2 - Run the app](./RunTheApp.md) should be done successfuly.
+1. [Challenge 3 - Move to Azure SQL Database](./MoveToAzureSql.md) should be done successfuly.
 
 ## Introduction
 
