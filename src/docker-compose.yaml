@@ -15,8 +15,8 @@ services:
       dockerfile: Dockerfile.Server
     container_name: rockpaperscissors-server
     environment:
-      ConnectionStrings_DefaultConnection: "Server=rockpaperscissors-sql,1433;Database=RockPaperScissorsBoom;User Id=SA;Password=<YOUR-STRONG-PASSWORD>;"
-      ASPNETCORE_ENVIRONMENT: "Development"
+      "ConnectionStrings:DefaultConnection": "Server=rockpaperscissors-sql,1433;Database=RockPaperScissorsBoom;User Id=SA;Password=<YOUR-STRONG-PASSWORD>;"
+      "ASPNETCORE_ENVIRONMENT": "Development"
     ports:
         - "80:80"
     depends_on:

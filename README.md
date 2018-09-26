@@ -1,4 +1,4 @@
-#Welcome to the Azure App Dev Hack!
+# Welcome to the Azure App Dev Hack!
 
 It's a challenge based and not a step-by-step lab, but don't worry you will do great whatever your experience is! You will be guided through different labs to bonify the given "Rock Paper Scissors Boom" app by leveraging Azure PaaS services. The intent is having you practicing with our tools, technologies and services. Let's try to go out of your comfort zone, try and learn new stuffs, and for sure let's have fun!
 

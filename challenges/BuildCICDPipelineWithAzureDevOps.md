@@ -22,7 +22,7 @@ In the previous we manually deployed the app on Azure. Now with this challenge y
 3. In Azure Cloud Shell, make sure `az acr repository` is showing your new containers images properly - FIXME(mabenoit).
 4. In GitHub, make sure you documented the different commands you have used to provision your infrastructure. It could be in a `.md` file or in `.sh` file. You will complete this script as you are moving forward with the further labs.
 5. In your web browser, navigate to the app and play a game, make sure it's working without any error.
-6. In Azure DevOps (Boards), from the Kanban view ("FIXME(mabenoit)"), you could now drag and drop the user story associated to this Challenge to the `Done` column, congrats! ;)
+6. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Done` column, congrats! ;)
 
 ## Tips
 

@@ -19,7 +19,7 @@ With this second challenge you will be able to run "locally" in your Azure Cloud
 2. In Azure Cloud Shell, make sure `docker ps` is showing you x containers FIXME(mabenoit).
 3. In your web browser, navigate to the app and play a game, make sure it's working without any error.
 4. In Azure Cloud Shell, read the `docker-compose.yaml` file and the `Dockerfile*` files. What do you see? What do you understand? Are you able to quote 3 benefits/advantages of using Docker?
-5. In Azure DevOps (Boards), from the Kanban view ("FIXME(mabenoit)"), you could now drag and drop this user story associated to this Challenge to the `Done` column, congrats! ;)
+5. In Azure DevOps (Boards), from the Boards view, you could now drag and drop this user story associated to this Challenge to the `Done` column, congrats! ;)
 
 ## Tips
 
