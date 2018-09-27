@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 using RockPaperScissorsBoom.Server.Helpers;
+using RockPaperScissorsBoom.Server.Models;
 
 namespace RockPaperScissorsBoom.Server.Pages
 {
@@ -78,7 +79,19 @@ namespace RockPaperScissorsBoom.Server.Pages
             BotRankings = gameRunnerResult.GameRecord.BotRecords.OrderByDescending(x => x.Wins).ToList();
             AllFullResults = gameRunnerResult.AllMatchResults.OrderBy(x => x.Competitor.Name).ToList();
 
-            await messageHelper.PublishMessageAsync("RockPaperScissors.GameWinner.RunTheGamePage", "Note", DateTime.UtcNow, new { Game = BotRankings.First().GameRecord.Id, Winner = BotRankings.First().Competitor.Name });
+            await PublishMessage(BotRankings.First().GameRecord.Id.ToString(), BotRankings.First().Competitor.Name);
+        }
+
+        internal async Task PublishMessage(string GameId, string Winner)
+        {
+            var msg = new GameMessage
+            {
+                GameId = GameId,
+                Winner = Winner,
+                Hostname = this.HttpContext.Request.Host.Host,
+                TeamName = this.configuration["P20HackFestTeamName"]
+            };
+            await messageHelper.PublishMessageAsync("RockPaperScissors.GameWinner.RunTheGamePage", "Note", DateTime.UtcNow, msg);
         }
 
         private void SaveResults(GameRunnerResult gameRunnerResult)

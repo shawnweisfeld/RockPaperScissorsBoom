@@ -12,6 +12,7 @@ using RockPaperScissorsBoom.Server.Bot;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 using RockPaperScissorsBoom.Server.Helpers;
+using RockPaperScissorsBoom.Server.Models;
 
 namespace RockPaperScissorsBoom.Server.Controllers
 {
@@ -63,7 +64,20 @@ namespace RockPaperScissorsBoom.Server.Controllers
             var winner = gameRunnerResult.AllMatchResults.Select(x => x.MatchResults).First().First().Player1.Name;
             await messageHelper.PublishMessageAsync("RockPaperScissors.GameWinner.RunGameController", "Note", DateTime.UtcNow, new { Game = gameRunnerResult.GameRecord.Id, Winner = winner });
 
+            await PublishMessage(gameRunnerResult.GameRecord.Id.ToString(), winner);
             return gameRunnerResult.AllMatchResults.Select(x => x.MatchResults).First().First().Player1.Name;
+        }
+
+        internal async Task PublishMessage(string GameId, string Winner)
+        {
+            var msg = new GameMessage
+            {
+                GameId = GameId,
+                Winner = Winner,
+                Hostname = this.HttpContext.Request.Host.Host,
+                TeamName = this.configuration["P20HackFestTeamName"]
+            };
+            await messageHelper.PublishMessageAsync("RockPaperScissors.GameWinner.RunGameController", "Note", DateTime.UtcNow, msg);
         }
 
         private void SaveResults(GameRunnerResult gameRunnerResult)
