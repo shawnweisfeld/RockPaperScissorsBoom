@@ -25,9 +25,9 @@ In a previous challenge we deployed the app on Azure but into an Azure Docker-ma
 ## Tips
 
 1. To use a custom Docker image for Web App for Containers, [here you are](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image)! The "Use a Docker image from any private registry" section is specifically what you are looking for.
-2. [Azure Web App Service CLI documentation](https://docs.microsoft.com/en-us/cli/azure/webapp)
-3. [Azure Container Registry CLI documentation](https://docs.microsoft.com/en-us/cli/azure/acr)
-4. You could execute the `git` commands "locally" from within your Azure Cloud Shell, or you could leverage the web editor directy from GitHub.
+1. [Azure Web App Service CLI documentation](https://docs.microsoft.com/en-us/cli/azure/webapp)
+1. [Azure Container Registry CLI documentation](https://docs.microsoft.com/en-us/cli/azure/acr)
+1. You could execute the `git` commands "locally" from within your Azure Cloud Shell, or you could leverage the web editor directy from GitHub.
 
 ## Advanced challenges
 
