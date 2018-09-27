@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
+using RockPaperScissorsBoom.Server.Helpers;
 
 namespace RockPaperScissorsBoom.Server.Pages
 {
@@ -17,15 +19,17 @@ namespace RockPaperScissorsBoom.Server.Pages
         private readonly ApplicationDbContext db;
         private readonly IMetrics metrics;
         private readonly IConfiguration configuration;
+        private readonly IMessagingHelper messageHelper;
 
         public List<BotRecord> BotRankings { get; set; }
         public List<FullResults> AllFullResults { get; set; }
 
-        public RunTheGameModel(ApplicationDbContext db, IMetrics metrics, IConfiguration configuration)
+        public RunTheGameModel(ApplicationDbContext db, IMetrics metrics, IConfiguration configuration, IMessagingHelper messageHelper)
         {
             this.db = db;
             this.metrics = metrics;
             this.configuration = configuration;
+            this.messageHelper = messageHelper;
         }
 
         public void OnGet()
@@ -39,7 +43,7 @@ namespace RockPaperScissorsBoom.Server.Pages
             AllFullResults = new List<FullResults>();
         }
 
-        public void OnPost()
+        public async Task OnPostAsync()
         {
             List<Competitor> competitors = db.Competitors.ToList();
             if (!competitors.Any())
@@ -70,10 +74,11 @@ namespace RockPaperScissorsBoom.Server.Pages
             // Send the event:
             metrics.TrackEventDuration("GameRun", properties, metric);
 
-
             SaveResults(gameRunnerResult);
             BotRankings = gameRunnerResult.GameRecord.BotRecords.OrderByDescending(x => x.Wins).ToList();
             AllFullResults = gameRunnerResult.AllMatchResults.OrderBy(x => x.Competitor.Name).ToList();
+
+            await messageHelper.PublishMessageAsync("RockPaperScissors.GameWinner.RunTheGamePage", "Note", DateTime.UtcNow, new { Game = BotRankings.First().GameRecord.Id, Winner = BotRankings.First().Competitor.Name });
         }
 
         private void SaveResults(GameRunnerResult gameRunnerResult)

@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.HttpOverrides;
 using RockPaperScissor.Core.Model;
 using Microsoft.ApplicationInsights;
+using RockPaperScissorsBoom.Server.Helpers;
 
 namespace RockPaperScissorsBoom.Server
 {
@@ -60,6 +61,7 @@ namespace RockPaperScissorsBoom.Server
             {
                 options.IdleTimeout = TimeSpan.FromHours(1);
             });
+            services.AddSingleton<IMessagingHelper, EventGridMessagingHelper>();
             services.AddSingleton<IMetrics>(s => new AIMetrics(s.GetService<TelemetryClient>(),"BotDesicionTime"));
         }
 
