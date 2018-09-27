@@ -1,4 +1,4 @@
-# Challenge 3 - Run the app on Azure
+# Challenge 4 - Run the app on Azure
 
 ## Prerequisities
 
@@ -6,41 +6,44 @@
 
 ## Introduction
 
-In the previous we deployed the app on Azure but into an Azure Docker-machine playing the role of your local machine. Now with this challenge you will be able to provision an Azure Web App Service for Linux to host your "Rock Paper Scissors Boom" app.
+In a previous challenge we deployed the app on Azure but into an Azure Docker-machine playing the role of your local machine. Now with this challenge you will be able to provision an Azure Web App Service for Containers to host your "Rock Paper Scissors Boom" app.
 
 ## Challenges
 
-1. Provision your Azure Web App Service via Infrastructure-as-Code from within Azure Cloud Shell. The approach here is to leverage the Azure CLI (not the Azure portal) by executing a serie of bash commands.
-2. Deploy, test the app as an end-user, and play a game once deployed there.
+1. Provision an Azure Web App Service for Containers via Infrastructure-as-Code from within Azure Cloud Shell. The approach here is to leverage the Azure CLI (not the Azure portal) by executing a serie of bash commands. Do you remember? *Friends don't let friends use UI to provision Azure services, right? ;)*
+1. Take the same approach to provision an Azure Container Registry (ACR) to push your container in it. 
+1. Deploy the app in your Azure Web App Service for Containers by pulling the Docker image from your ACR previously created, test it as an end-user, and play a game once deployed there.
 
 ## Success criteria
 
-1. In Azure Cloud Shell, make sure `az web list` is showing your Azure services properly - FIXME(mabenoit).
-2. In Azure Cloud Shell, delete the previously SQL Server on Linux container deployed on your Azure Docker-machine, by running a `docker rm` command.
-3. In your web browser, navigate to the app and play a game, make sure it's working without any error.
-4. In GitHub, make sure you documented the different commands you have used to provision your infrastructure. It could be in a `.md` file or in `.sh` file. You will complete this script as you are moving forward with the further labs.
-5. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
+1. In Azure Cloud Shell, make sure `az webapp list` and `az acr list` are showing your Azure services properly.
+1. In your web browser, navigate to the app and play a game, make sure it's working without any error.
+1. In GitHub, make sure you documented the different commands you have used to provision your infrastructure. It could be in a `.md` file or in `.sh` file. You will complete this script as you are moving forward with the further challenges.
+  1. Be sure you don't commit any secrets/passwords into a public GitHub repo.
+1. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 
 ## Tips
 
-1. Azure Web App Service CLI documentation - FIXME(mabenoit)
-2. Azure Container Registry? - FIXME(mabenoit)
-3. You could execute the `git` commands "locally" from within your Azure Cloud Shell, or you could leverage the web editor directy from the Azure DevOps (Repos) - FIXME(mabenoit)
+1. To use a custom Docker image for Web App for Containers, [here you are](https://docs.microsoft.com/en-us/azure/app-service/containers/tutorial-custom-docker-image)! The "Use a Docker image from any private registry" section is specifically what you are looking for.
+2. [Azure Web App Service CLI documentation](https://docs.microsoft.com/en-us/cli/azure/webapp)
+3. [Azure Container Registry CLI documentation](https://docs.microsoft.com/en-us/cli/azure/acr)
+4. You could execute the `git` commands "locally" from within your Azure Cloud Shell, or you could leverage the web editor directy from GitHub.
 
 ## Advanced challenges
 
 Too comfortable? Eager to do more? Here you are:
 
-1. Instead of leveraging Azure Web App Service for Linux, you could deploy your app in Azure Container Instance (ACI) or Azure Kubernetes Service (AKS).
-2. Instead of leveraging Azure CLI to provision your infrastructure, you could leverage instead Azure ARM Templates, Ansible for Azure or Terraform for Azure.
+1. Instead of leveraging Azure Web App Service for Containers, you could deploy your app in Azure Web App Service on Linux, Azure Container Instance (ACI) or Azure Kubernetes Service (AKS).
+1. Instead of leveraging Azure CLI to provision your infrastructure, you could leverage instead Azure ARM Templates, Ansible for Azure or Terraform for Azure.
 
 ## Learning resources
 
-- Cloud computing hosting decision tree - FIXME(mabenoit)
-- Containers hosting options in Azure - FIXME(mabenoit)
-- Azure CLI - FIXME(mabenoit)
-- Azure ARM Templates - FIXME(mabenoit)
-- Ansible for Azure - FIXME(mabenoit)
-- Terraform for Azure - FIXME(mabenoit)
+- [Cloud computing hosting decision tree](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)
+- [Azure App Service, Virtual Machines, Service Fabric, and Cloud Services comparison](https://docs.microsoft.com/en-us/azure/app-service/choose-web-site-cloud-service-vm)
+- [Containers hosting options in Azure](https://azure.microsoft.com/en-us/overview/containers/)
+- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure)
+- [Azure ARM Templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
+- [Ansible for Azure](https://docs.microsoft.com/en-us/azure/ansible/)
+- [Terraform for Azure](https://docs.microsoft.com/en-us/azure/terraform/)
 
 [Next challenge (Build a CI/CD pipeline with Azure DevOps) >](./BuildCICDPipelineWithAzureDevOps.md)
