@@ -16,8 +16,13 @@ Here are the technologies and services you will leverage:
 - Azure DevOps (formerly known as VSTS)
 - Azure App Service on Linux
 - Azure Container Registry
+- Azure AD B2C
+- Azure CDN
 - Azure Application Insights
 - Azure SQL Database
+- Logic Apps
+- Azure Functions
+- Azure Event Grid
 
 ## Challenges
 
@@ -26,6 +31,12 @@ Here are the technologies and services you will leverage:
 1. [Move to Azure SQL Database](./challenges/MoveToAzureSql.md)
 1. [Run the app on Azure](./challenges/RunOnAzure.md)
 1. [Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
+1. [Implement AAD B2C](./challenges/ImplementAADB2C.md)
+1. [Add Application Monitoring](./challenges/AddApplicationMonitoring.md)
+1. [Run the Game Continuously](./challenges/RunTheGameContinuously.md)
+1. [Leverage CDN](./challenges/LeverageCDN.md)
+1. [Send a Winner Notification](./challenges/SendWinnerNotification.md)
+1. [Run a Load Test](./challenges/RunALoadTest.md)
 
 ## About the Rock Paper Scissors Boom app
 
