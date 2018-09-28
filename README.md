@@ -13,13 +13,13 @@ Here are the technologies and services you will leverage:
 - ASP.NET Core
 - SQL Server on Linux
 - Docker
+- Azure SQL Database
 - Azure DevOps (formerly known as VSTS)
 - Azure App Service on Linux
 - Azure Container Registry
 - Azure AD B2C
 - Azure CDN
 - Azure Application Insights
-- Azure SQL Database
 - Logic Apps
 - Azure Functions
 - Azure Event Grid
@@ -32,6 +32,7 @@ Here are the technologies and services you will leverage:
 1. [Run the app on Azure](./challenges/RunOnAzure.md)
 1. [Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
 1. [Implement AAD B2C](./challenges/ImplementAADB2C.md)
+1. [Leverage SignalR](./challenges/LeverageSignalR.md)
 1. [Add Application Monitoring](./challenges/AddApplicationMonitoring.md)
 1. [Run the Game Continuously](./challenges/RunTheGameContinuously.md)
 1. [Leverage CDN](./challenges/LeverageCDN.md)
