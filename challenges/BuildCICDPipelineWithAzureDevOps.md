@@ -2,11 +2,11 @@
 
 ## Prerequisities
 
-1. [Challenge 4 - Run the app on Azure](./RunOnAzure.md) should be done successfuly.
+1. [Challenge 4 - Run the app on Azure](./RunOnAzure.md) should be done successfully.
 
 ## Introduction
 
-In the previous we manually deployed the app on Azure. Now with this challenge you will be able to build an entire CI/CD pipeline with Azure DevOps.
+In the previous challenge we manually deployed the app on Azure. Now with this challenge you will be able to build an entire CI/CD pipeline with Azure DevOps.
 
 ## Challenges
 

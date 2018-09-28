@@ -25,6 +25,7 @@ The application has the code in place to authenticate users against Azure AD B2C
 
 
 3. A user can successfully add or edit a bot in the Competitor views.
+1. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 
 ## Tips
 
@@ -36,6 +37,7 @@ The application has the code in place to authenticate users against Azure AD B2C
 Too comfortable? Eager to do more? Try this:
 * Allow users to authenticate with more than 1 Identity Provider. Try it with Facebook and LinkedIn too.
 * Rather than relying on users to use their social logins, let them create their own accounts in your tenant.
+
 
 ## Learning resources
 
