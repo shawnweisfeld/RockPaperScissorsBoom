@@ -82,7 +82,7 @@ namespace RockPaperScissorsBoom.Server.Data.Migrations
                         .WithMany("BotRecords")
                         .HasForeignKey("GameRecordId")
                         .OnDelete(DeleteBehavior.Cascade);
-dot                });
+                });
 #pragma warning restore 612, 618
         }
     }
