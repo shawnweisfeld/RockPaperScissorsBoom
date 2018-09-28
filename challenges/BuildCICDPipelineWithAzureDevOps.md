@@ -19,7 +19,6 @@ In the previous we manually deployed the app on Azure. Now with this challenge y
 
 1. In Azure Cloud Shell, make sure `az webapp list` is showing your Azure services properly.
 1. In Azure Cloud Shell, make sure `az acr repository show-tags` is showing your new container image properly.
-1. In GitHub, make sure you documented the different commands you have used to provision your infrastructure. It could be in a `.md` file or in `.sh` file. You will complete this script as you are moving forward with the further labs.
 1. In your web browser, navigate to the app and play a game, make sure it's working without any error and that your update is here.
 1. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 
