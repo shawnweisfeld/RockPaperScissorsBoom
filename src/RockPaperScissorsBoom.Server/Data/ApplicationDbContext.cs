@@ -4,7 +4,7 @@ using RockPaperScissor.Core.Model;
 
 namespace RockPaperScissorsBoom.Server.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : DbContext
     {
         //public DbSet<FullResults> FullResults { get; set; }
         public DbSet<GameRecord> GameRecords { get; set; }
@@ -15,5 +15,7 @@ namespace RockPaperScissorsBoom.Server.Data
             : base(options)
         {
         }
+
+        
     }
 }

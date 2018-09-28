@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RockPaperScissorsBoom.Server.Data;
 
 namespace RockPaperScissorsBoom.Server.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180928214014_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,14 +77,12 @@ namespace RockPaperScissorsBoom.Server.Data.Migrations
                 {
                     b.HasOne("RockPaperScissor.Core.Model.Competitor", "Competitor")
                         .WithMany()
-                        .HasForeignKey("CompetitorId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CompetitorId");
 
                     b.HasOne("RockPaperScissor.Core.Model.GameRecord", "GameRecord")
                         .WithMany("BotRecords")
-                        .HasForeignKey("GameRecordId")
-                        .OnDelete(DeleteBehavior.Cascade);
-dot                });
+                        .HasForeignKey("GameRecordId");
+                });
 #pragma warning restore 612, 618
         }
     }
