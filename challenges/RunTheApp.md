@@ -24,7 +24,7 @@ With this second challenge you will be able to run "locally" in your Azure Cloud
 ## Tips
 
 1. .NET Core is not installed in Azure Cloud Shell?! Don't worry, we have something for you: Docker!
-  - You could for example run this command `docker-compose up -d` from the folder where the `docker-compose.yaml` file is.
+  - You could for example run this command `docker-compose up --build -d` from the folder where the `docker-compose.yaml` file is.
 1. Your app is deployed on your remote Azure Docker-machine, how to browse the app now, right? Just grab the IP address of your Azure Docker-machine. Give `docker-machine ls` a try ;)
 1. To edit or read files from within Azure Cloud Shell, you could run `code .` to graphically browse the current folder and its files and subfolders. FYI, `cat` or `vi` are other alternatives.
 

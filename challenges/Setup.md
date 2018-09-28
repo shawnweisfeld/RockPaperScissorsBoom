@@ -21,7 +21,6 @@ With this first challenge you will be able to setup the environment required to 
 1. [Clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) your repo in [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/overview)
    1. We recommend using [Bash (Linux) mode](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) in the cloud shell for this Hack
    1. Have limited screen real estate? Try the [full screen shell](https://shell.azure.com/)
-1. [Change](https://git-scm.com/docs/git-checkout) your current branch to `ocp-hack` - FIXME(mrichter), it should be on `master`?
 1. Setup an Azure Docker-machine to be used through your Azure Cloud Shell ([instructions here](./helpers/CreateDockerMachine.md))
 1. Create a new Private [Azure DevOps project](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav) (with Git and Agile under advanced options)
    1. The source code will be in GitHub, but the rest (backlog, build, release and tests) will be in Azure DevOps.
