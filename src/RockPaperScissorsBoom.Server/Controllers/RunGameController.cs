@@ -62,8 +62,6 @@ namespace RockPaperScissorsBoom.Server.Controllers
 
             SaveResults(gameRunnerResult);
             var winner = gameRunnerResult.AllMatchResults.Select(x => x.MatchResults).First().First().Player1.Name;
-            await messageHelper.PublishMessageAsync("RockPaperScissors.GameWinner.RunGameController", "Note", DateTime.UtcNow, new { Game = gameRunnerResult.GameRecord.Id, Winner = winner });
-
             await PublishMessage(gameRunnerResult.GameRecord.Id.ToString(), winner);
             return gameRunnerResult.AllMatchResults.Select(x => x.MatchResults).First().First().Player1.Name;
         }
