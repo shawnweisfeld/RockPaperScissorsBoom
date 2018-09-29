@@ -15,6 +15,7 @@ The application has the code in place to authenticate users against Azure AD B2C
 1. Create an `Azure AD B2C` application in the Azure portal.
 1. Allow users to authenticate with a `Microsoft Account`.
 1. Make sure it works in your dev environment AND on Azure!
+1. **DO NOT** store credentials in your code or appsettings file.
 
 ## Success criteria
 
@@ -32,6 +33,7 @@ The application has the code in place to authenticate users against Azure AD B2C
 * Make sure you are calling the application with https (locally and in Azure) for the authentication redirects to work.
 * Remember to keep your configuration secrets OUT of your code or config files. 
 * If you can't find your AAD B2C Azure resources after you create them, make sure you switch AAD Tenants in the Azure portal.
+* Don't forget `/signin-oidc` in your redirect URL :)
 ## Advanced challenges
 
 Too comfortable? Eager to do more? Try this:
@@ -42,5 +44,6 @@ Too comfortable? Eager to do more? Try this:
 ## Learning resources
 
 * [Set up AAD B2C with a Microsoft Account](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-msa-app) - In step 6, you may to format the Redirect URL as: `https://login.microsoftonline.com/te/<your-tenant>.onmicrosoft.com/oauth2/authresp`
+* [Working with Azure App Service Application Settings](https://blogs.msdn.microsoft.com/cjaliaga/2016/08/10/working-with-azure-app-services-application-settings-and-connection-strings-in-asp-net-core/)
 
 [Next challenge (FIXME) >](./)
