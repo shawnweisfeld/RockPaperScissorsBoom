@@ -25,7 +25,7 @@ We've got our app running, but how do we know how well it's performing? Let's in
 
 ## Advanced challenges
 
-Too comfortable? Eager to do more? Here you are:
+Too comfortable? Eager to do more? Try this:
 
 * Find places throughout the applicaiton to track more telemetry.
 * Create an alert based on App Insights telemetry.
