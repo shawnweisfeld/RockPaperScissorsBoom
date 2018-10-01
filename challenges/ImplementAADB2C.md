@@ -1,4 +1,4 @@
-# Challenge 6 - Implement Azure AD B2C
+# Challenge 7 - Implement Azure AD B2C
 
 ## Prerequisities
 
@@ -24,26 +24,27 @@ The application has the code in place to authenticate users against Azure AD B2C
 
 ![Personalized Authenticated Greeting](./images/personalized-authenticated-greeting.PNG "Personalized Authenticated Greeting")
 
-
-3. A user can successfully add or edit a bot in the Competitor views.
+1. A user can successfully add or edit a bot in the Competitor views.
 1. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 
 ## Tips
 
-* Make sure you are calling the application with https (locally and in Azure) for the authentication redirects to work.
-* Remember to keep your configuration secrets OUT of your code or config files. 
-* If you can't find your AAD B2C Azure resources after you create them, make sure you switch AAD Tenants in the Azure portal.
-* Don't forget `/signin-oidc` in your redirect URL :)
+1. Make sure you are calling the application with https (locally and in Azure) for the authentication redirects to work.
+1. Remember to keep your configuration secrets OUT of your code or config files. 
+1. If you can't find your AAD B2C Azure resources after you create them, make sure you switch AAD Tenants in the Azure portal.
+1. Don't forget `/signin-oidc` in your redirect URL :)
+
 ## Advanced challenges
 
 Too comfortable? Eager to do more? Try this:
-* Allow users to authenticate with more than 1 Identity Provider. Try it with Facebook and LinkedIn too.
-* Rather than relying on users to use their social logins, let them create their own accounts in your tenant.
+
+1. Allow users to authenticate with more than 1 Identity Provider. Try it with Facebook and LinkedIn too.
+1. Rather than relying on users to use their social logins, let them create their own accounts in your tenant.
 
 
 ## Learning resources
 
-* [Set up AAD B2C with a Microsoft Account](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-msa-app) - In step 6, you may to format the Redirect URL as: `https://login.microsoftonline.com/te/<your-tenant>.onmicrosoft.com/oauth2/authresp`
-* [Working with Azure App Service Application Settings](https://blogs.msdn.microsoft.com/cjaliaga/2016/08/10/working-with-azure-app-services-application-settings-and-connection-strings-in-asp-net-core/)
+1. [Set up AAD B2C with a Microsoft Account](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-msa-app) - In step 6, you may to format the Redirect URL as: `https://login.microsoftonline.com/te/<your-tenant>.onmicrosoft.com/oauth2/authresp`
+1. [Working with Azure App Service Application Settings](https://blogs.msdn.microsoft.com/cjaliaga/2016/08/10/working-with-azure-app-services-application-settings-and-connection-strings-in-asp-net-core/)
 
 [Next challenge (FIXME) >](./)

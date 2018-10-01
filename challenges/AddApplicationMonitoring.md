@@ -1,4 +1,4 @@
-# Challenge 8 - Add Application Monitoring
+# Challenge 5 - Add Application Monitoring
 
 ## Prerequisities
 
@@ -10,28 +10,30 @@ We've got our app running, but how do we know how well it's performing? Let's in
 
 ## Challenges
 
-1. You'll find the app is already wired up for Application Insights, you just need to populate app settings configuration with your own Application Insights key.
-1. Once you have the key, start using the app to see metrics.
+1. You'll find the app is already wired up for Application Insights, you just need to populate app settings configuration with your own Application Insights key. Once you have the key, start using the app to see metrics.
 
 ## Success criteria
 
+1. Make sure you got some data in Application Insights while running your application in both places locally (Azure Cloud Shell) and in Azure App Service. Make sure you are leveraging the propoer way for both to set the `InstrumentationKey` (i.e. in docker-compose.yaml file for local and in Azure App Service's AppSettings).
 1. Build a dashboard in the Azure Portal for viewing performance of the app.
-1. Create a visual that tracks how long it takes for a game to execute in the app. - The app is already wired up for tracking this, just figure out how to display the visual in the dashboard.
+1. In GitHub, make sure you documented the different commands you have used to update or provision your infrastructure. It could be in a `.md` file or in `.sh` file. You will complete this script as you are moving forward with the further challenges.
 1. In Azure DevOps (Boards), from the Boards view, you could now drag and drop the user story associated to this Challenge to the `Resolved` or `Closed` column, congrats! ;)
 
 ## Tips
 
-* Game Duration is a Custom Metric, you should see it populate in the Visualization builder after you run a game.
+1. Game Duration is a Custom Metric, you should see it populate in the Visualization builder after you run a game.
+1. [Application Insights CLI documentation](FIXME)
 
 ## Advanced challenges
 
 Too comfortable? Eager to do more? Try this:
 
-* Find places throughout the applicaiton to track more telemetry.
-* Create an alert based on App Insights telemetry.
-* Generate an Application Map
+1. Find places throughout the applicaiton to track more telemetry.
+1. Create an alert based on App Insights telemetry.
+1. Generate an Application Map
 
 ## Learning resources
-* https://docs.microsoft.com/en-us/azure/application-insights/app-insights-overview?toc=/azure/azure-monitor/toc.json
 
-[Next challenge (FIXME) >](./)
+1. https://docs.microsoft.com/en-us/azure/application-insights/app-insights-overview?toc=/azure/azure-monitor/toc.json
+
+[Next challenge (Build a CI/CD pipeline with Azure DevOps) >](./BuildCICDPipelineWithAzureDevOps.md)

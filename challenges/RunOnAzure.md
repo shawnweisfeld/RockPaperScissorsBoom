@@ -47,4 +47,4 @@ Too comfortable? Eager to do more? Try this:
 - [Ansible for Azure](https://docs.microsoft.com/en-us/azure/ansible/)
 - [Terraform for Azure](https://docs.microsoft.com/en-us/azure/terraform/)
 
-[Next challenge (Build a CI/CD pipeline with Azure DevOps) >](./BuildCICDPipelineWithAzureDevOps.md)
+[Next challenge (Add Application Monitoring) >](./AddApplicationMonitoring.md)

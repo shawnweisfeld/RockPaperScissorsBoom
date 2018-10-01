@@ -1,4 +1,4 @@
-# Challenge 5 - Build a CI/CD pipeline with Azure DevOps
+# Challenge 6 - Build a CI/CD pipeline with Azure DevOps
 
 ## Prerequisities
 
@@ -6,7 +6,7 @@
 
 ## Introduction
 
-In the previous challenge we manually deployed the app on Azure. Now with this challenge you will be able to build an entire CI/CD pipeline with Azure DevOps.
+In a previous challenge we manually deployed the app on Azure. Now with this challenge you will be able to build an entire CI/CD pipeline with Azure DevOps.
 
 ## Challenges
 
@@ -41,4 +41,4 @@ Too comfortable? Eager to do more? Try this:
 - [ACR Build task](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tasks-overview)
 - [Jenkins on Azure](https://docs.microsoft.com/en-us/azure/jenkins/)
 
-[Next challenge (FIXME) >](./)
+[Next challenge (Implement Azure AD B2C) >](./ImplementAADB2C.md)
