@@ -1,4 +1,4 @@
-# Challenge 11 - Send a Winner Notification
+# Challenge 10 - Send a Winner Notification
 
 ## Prerequisities
 
@@ -33,12 +33,8 @@ Imagine if you had this requirement: After each game is played, a notification s
     * Note that this requires a Windows-based Azure Function.
 1. If you're sending emails as the notifications, don't bombard your own inbox. Use a free service like [maildrop.cc](http://maildrop.cc) to create dummy email accounts.
 
-## Advanced challenges
-
-* N/A
-
 ## Learning resources
 
 * [Event Grid Trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-grid)
 
-[Next challenge (FIXME) >](./)
+[Next challenge (Run the Game Continuously) >](./RunTheGameContinuously.md)

@@ -1,4 +1,4 @@
-# Challenge 10 - Leverage CDN 
+# Challenge 9 - Leverage Azure CDN 
 
 ## Prerequisities
 
@@ -24,12 +24,10 @@ A content delivery network (CDN) is a distributed network of servers that can ef
 
 ## Tips
 
-1. Getting your content into CDN is easy on Azure, especially if you're hosting your application in an Azure Web Apps. 
-1. FIXME, find a tutorial for this
+1. [Azure CDN and Azure Web Apps](https://docs.microsoft.com/en-us/azure/cdn/cdn-add-to-web-app)
 
 ## Learning resources
 
-1. [Azure CDN and Azure Web Apps](https://docs.microsoft.com/en-us/azure/cdn/cdn-add-to-web-app)
-1. [Do you know Azure has its own CDN now? Recently announced GA!](FIXME)
+1. [Compare Azure CDN product features](https://docs.microsoft.com/en-us/azure/cdn/cdn-features)
 
-[Next challenge (FIXME) >](./)
+[Next challenge (Send a Winner Notification) >](./SendWinnerNotification.md)

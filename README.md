@@ -44,9 +44,9 @@ Here are the technologies and services you will leverage:
 1. [Build a CI/CD pipeline with Azure DevOps](./challenges/BuildCICDPipelineWithAzureDevOps.md)
 1. [Implement AAD B2C](./challenges/ImplementAADB2C.md)
 1. [Leverage SignalR](./challenges/LeverageSignalR.md)
-1. [Run the Game Continuously](./challenges/RunTheGameContinuously.md)
 1. [Leverage CDN](./challenges/LeverageCDN.md)
 1. [Send a Winner Notification](./challenges/SendWinnerNotification.md)
+1. [Run the Game Continuously](./challenges/RunTheGameContinuously.md)
 1. [Run a Load Test](./challenges/RunALoadTest.md)
 
 ## About the Rock Paper Scissors Boom app
@@ -68,5 +68,3 @@ Rules of the Game:
  * Each bot may also throw a water balloon whenever it likes.
 
 ![game uml](docs/game_diagram.png)
-
-

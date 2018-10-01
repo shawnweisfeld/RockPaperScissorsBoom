@@ -23,4 +23,4 @@ With this challenge we would like to add another Bot in your solution by leverag
 
 1. [Azure SignalR just announced GA at Ignite!](FIXME)
 
-[Next challenge (FIXME) >](./)
+[Next challenge (Leverage Azure CDN) >](./LeverageCDN.md)

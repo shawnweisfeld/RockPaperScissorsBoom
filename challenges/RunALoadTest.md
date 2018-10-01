@@ -1,4 +1,4 @@
-# Challenge 4 - Build a CI/CD pipeline with Azure DevOps
+# Challenge 12 - Run a Load Test
 
 ## Prerequisities
 
@@ -14,4 +14,4 @@
 
 ## Learning resources
 
-[Next challenge (FIXME) >](./)
+End of the Hack! Congrats! Have you done [all the challenges](../README.md)?

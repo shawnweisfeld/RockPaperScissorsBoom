@@ -47,4 +47,4 @@ Too comfortable? Eager to do more? Try this:
 1. [Set up AAD B2C with a Microsoft Account](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-msa-app) - In step 6, you may to format the Redirect URL as: `https://login.microsoftonline.com/te/<your-tenant>.onmicrosoft.com/oauth2/authresp`
 1. [Working with Azure App Service Application Settings](https://blogs.msdn.microsoft.com/cjaliaga/2016/08/10/working-with-azure-app-services-application-settings-and-connection-strings-in-asp-net-core/)
 
-[Next challenge (FIXME) >](./)
+[Next challenge (Leverage SignalR) >](./LeverageSignalR.md)
