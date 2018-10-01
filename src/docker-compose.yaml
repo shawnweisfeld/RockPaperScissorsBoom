@@ -4,7 +4,7 @@ services:
     image: microsoft/mssql-server-linux
     container_name: rockpaperscissors-sql
     environment:
-        SA_PASSWORD: "Y0ur-Str0ng-Passw0rd"
+        SA_PASSWORD: "M1cr0s0ft2018"
         ACCEPT_EULA: "Y"
     ports:
         - "1433:1433"
@@ -15,7 +15,7 @@ services:
       dockerfile: Dockerfile-Server
     container_name: rockpaperscissors-server
     environment:
-      "ConnectionStrings:DefaultConnection": "Server=rockpaperscissors-sql,1433;Database=RockPaperScissorsBoom;User Id=SA;Password=Y0ur-Str0ng-Passw0rd;"
+      "ConnectionStrings:DefaultConnection": "Server=rockpaperscissors-sql,1433;Database=RockPaperScissorsBoom;User Id=SA;Password=M1cr0s0ft2018;"
       "ASPNETCORE_ENVIRONMENT": "Development"
     ports:
         - "80:80"
