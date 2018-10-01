@@ -29,7 +29,7 @@ So far we have deployed a SQL Server on Linux containers which was really conven
 
 ## Advanced challenges
 
-Too comfortable? Eager to do more? Here you are:
+Too comfortable? Eager to do more? Try this:
 
 1. Instead of leveraging Azure CLI to provision your infrastructure, you could leverage instead Azure ARM Templates, Ansible for Azure or Terraform for Azure.
 

@@ -30,7 +30,7 @@ With this second challenge you will be able to run "locally" in your Azure Cloud
 
 ## Advanced challenges
 
-Too comfortable? Eager to do more? Here you are:
+Too comfortable? Eager to do more? Try this:
 
 1. Instead of leveraging Docker via Azure Cloud Shell, you could configure your local machine with Visual Studio Code, or Visual Studio, installed .NET Core and deploy your app locally.
 

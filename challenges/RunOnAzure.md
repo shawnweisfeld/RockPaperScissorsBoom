@@ -32,7 +32,7 @@ In a previous challenge we deployed the app on Azure but into an Azure Docker-ma
 
 ## Advanced challenges
 
-Too comfortable? Eager to do more? Here you are:
+Too comfortable? Eager to do more? Try this:
 
 1. Instead of leveraging Azure Web App Service for Containers, you could deploy your app in Azure Web App Service on Linux, Azure Container Instance (ACI) or Azure Kubernetes Service (AKS).
 1. Instead of leveraging Azure CLI to provision your infrastructure, you could leverage instead Azure ARM Templates, Ansible for Azure or Terraform for Azure.

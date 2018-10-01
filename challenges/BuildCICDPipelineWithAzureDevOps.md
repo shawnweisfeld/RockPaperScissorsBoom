@@ -29,7 +29,7 @@ In the previous challenge we manually deployed the app on Azure. Now with this c
 
 ## Advanced challenges
 
-Too comfortable? Eager to do more? Here you are:
+Too comfortable? Eager to do more? Try this:
 
 1. Instead of using the graphical definition of your Azure Pipelines (Builds), you could use the [YAML file definition](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts).
 1. Instead of building your containers images on the VSTS Hosted agent, you could use the [Azure Container Registry (ACR) Build Task feature](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tasks-overview).
