@@ -16,7 +16,6 @@ services:
     container_name: rockpaperscissors-server
     environment:
       "ConnectionStrings:DefaultConnection": "Server=rockpaperscissors-sql,1433;Database=RockPaperScissorsBoom;User Id=SA;Password=M1cr0s0ft2018;"
-      "ASPNETCORE_ENVIRONMENT": "Development"
     ports:
         - "80:80"
     depends_on:
