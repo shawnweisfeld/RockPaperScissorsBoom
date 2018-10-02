@@ -2,6 +2,7 @@
 using FluentAssertions;
 using RockPaperScissor.Core.Game;
 using RockPaperScissor.Core.Game.Bots;
+using UnitTests.Fakes;
 using Xunit;
 
 namespace UnitTests.Core.Game.GameRunnerTests
@@ -11,7 +12,7 @@ namespace UnitTests.Core.Game.GameRunnerTests
         [Fact]
         public void ReturnEmpty_GivenNoBots()
         {
-            var gameRunner = new GameRunner();
+            var gameRunner = new GameRunner(new FakeMetrics());
 
             var result = gameRunner.StartAllMatches();
 
@@ -21,7 +22,7 @@ namespace UnitTests.Core.Game.GameRunnerTests
         [Fact]
         public void ReturnOneBot_GivenOneBotCompeting()
         {
-            var gameRunner = new GameRunner();
+            var gameRunner = new GameRunner(new FakeMetrics());
             gameRunner.AddBot(new RockOnlyBot());
 
             var result = gameRunner.StartAllMatches();

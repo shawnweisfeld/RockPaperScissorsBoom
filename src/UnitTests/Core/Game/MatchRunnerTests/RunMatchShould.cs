@@ -3,13 +3,14 @@ using RockPaperScissor.Core.Game;
 using RockPaperScissor.Core.Game.Bots;
 using RockPaperScissor.Core.Game.Results;
 using RockPaperScissor.Core.Model;
+using UnitTests.Fakes;
 using Xunit;
 
 namespace UnitTests.Core.Game.MatchRunnerTests
 {
     public class RunMatchShould
     {
-        private readonly MatchRunner _matchRunner = new MatchRunner();
+        private readonly MatchRunner _matchRunner = new MatchRunner(new FakeMetrics());
         private readonly BaseBot _rockOnly = new RockOnlyBot { Competitor = new Competitor() };
         private readonly BaseBot _scissorsOnly = new ScissorsOnlyBot {Competitor = new Competitor() };
 
