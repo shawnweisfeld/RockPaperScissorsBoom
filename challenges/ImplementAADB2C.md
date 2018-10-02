@@ -1,4 +1,4 @@
-# Challenge 7 - Implement Azure AD B2C
+# Challenge 8 - Implement Azure AD B2C
 
 ## Prerequisities
 

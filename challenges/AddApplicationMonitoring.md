@@ -1,4 +1,4 @@
-# Challenge 5 - Add Application Monitoring
+# Challenge 6 - Add Application Monitoring
 
 ## Prerequisities
 

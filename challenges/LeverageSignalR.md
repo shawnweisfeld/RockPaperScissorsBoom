@@ -1,4 +1,4 @@
-# Challenge 8 - Leverage SignalR
+# Challenge 9 - Leverage SignalR
 
 ## Prerequisities
 
