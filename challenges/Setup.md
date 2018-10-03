@@ -22,7 +22,7 @@ With this first challenge you will be able to setup the environment required to 
    1. We recommend using [Bash (Linux) mode](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart) in the cloud shell for this Hack
    1. Have limited screen real estate? Try the [full screen shell](https://shell.azure.com/)
 1. Setup an Azure Docker-machine to be used through your Azure Cloud Shell ([instructions here](./helpers/CreateDockerMachine.md))
-1. Create a new Private [Azure DevOps project](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav) (with Git and Agile under advanced options)
+1. Create a new Private project in [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=vsts&tabs=new-nav) (with Git and Agile under advanced options)
    1. The source code will be in GitHub, but the rest (backlog, build, release and tests) will be in Azure DevOps.
 1. Populate your Azure DevOps (Boards) backlog with user stories (work items). One user story per challenge. ([List of challenges in the ReadMe](../Readme.md))
 

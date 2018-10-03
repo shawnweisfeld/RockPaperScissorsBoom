@@ -1,4 +1,4 @@
-# Challenge 6 - Build a CI/CD pipeline with Azure DevOps
+# Challenge 7 - Build a CI/CD pipeline with Azure DevOps
 
 ## Prerequisities
 

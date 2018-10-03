@@ -24,6 +24,6 @@ namespace RockPaperScissor.Core.Model
             return Id.GetHashCode();
         }
 
-        public Guid Id { get; private set; } = Guid.NewGuid();
+        public Guid Id { get; set; } = Guid.NewGuid();
     }
 }

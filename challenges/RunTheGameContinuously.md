@@ -1,4 +1,4 @@
-# Challenge 11 - Run the Game Continuously
+# Challenge 5 - Run the Game Continuously
 
 ## Prerequisities
 
@@ -25,4 +25,4 @@ This is a simple challenge to get your Rock Papers Scissors Boom Server app to p
 
 * [Recurring Tasks with Logic Apps](https://docs.microsoft.com/en-us/azure/connectors/connectors-native-recurrence)
 
-[Next challenge (Run a Load Test) >](./RunALoadTest.md)
+[Next challenge (Add Application Monitoring) >](./AddApplicationMonitoring.md)

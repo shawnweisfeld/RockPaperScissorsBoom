@@ -1,4 +1,4 @@
-# Challenge 10 - Send a Winner Notification
+# Challenge 11 - Send a Winner Notification
 
 ## Prerequisities
 
@@ -37,4 +37,4 @@ Imagine if you had this requirement: After each game is played, a notification s
 
 * [Event Grid Trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-grid)
 
-[Next challenge (Run the Game Continuously) >](./RunTheGameContinuously.md)
+[Next challenge (Run a Load Test) >](./RunALoadTest.md)
